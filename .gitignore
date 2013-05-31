@@ -5,6 +5,7 @@
 *.ipr
 *.iws
 .idea/
+node_modules/
 
 ### Linux ###
 .*

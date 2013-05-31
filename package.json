@@ -1,0 +1,12 @@
+{
+    "name": "webdriver-js-example",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "mocha": "*",
+        "chai": "*",
+        "webdriverjs": "*",
+        "phantomjs": "*"
+
+    }
+}
