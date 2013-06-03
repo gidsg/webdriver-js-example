@@ -10,7 +10,7 @@ var stepDefs = function () {
     });
 
     this.Given(/^I open the responsive site$/, function (callback) {
-        this.visit("http://m.gucode.co.uk", callback);
+        this.visit("http://m.guardian.co.uk", callback);
     });
 
     this.When(/^I choose to read more content$/, function (callback) {
