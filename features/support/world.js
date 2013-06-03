@@ -1,4 +1,5 @@
 var expect = require('chai').expect;
+var assert = require('chai').assert;
 var webdriverjs = require("webdriverjs");
 var client = webdriverjs.remote({
     desiredCapabilities: {
@@ -37,6 +38,8 @@ client.init();
 
 
 var World = function World(callback) {
+    this.assert = assert;
+    this.expect = expect;
     this.browser = client; // this.browser will be available in step definitions
 
     this.visit = function (url, callback) {

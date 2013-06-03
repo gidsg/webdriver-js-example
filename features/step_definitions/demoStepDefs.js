@@ -10,6 +10,36 @@ var stepDefs = function () {
         this.browser.hasText(selector, 'More on this story', callback)
     });
 
+    this.Given(/^I open the responsive site$/, function (callback) {
+        this.visit("http://m.gucode.co.uk", callback);
+    });
+
+    this.When(/^I choose to read more content$/, function (callback) {
+        var assert = this.assert
+        var expect = this.expect
+        this.browser.waitFor(".js-show-more", 100, function () {
+            var self = this;
+            self.isVisible(".trail--headline", function (error, result) {
+                expect(error).not.to.be.null;
+                self.buttonClick(".js-show-more", callback)
+            });
+
+
+        })
+    });
+
+    this.Then(/^I should receive more headlines$/, function (callback) {
+        var assert = this.assert
+        this.browser.waitFor(".trail--headline", 10000, function () {
+            var self = this;
+            self.isVisible(".trail--headline", function (error, result) {
+                assert.equal(true, result);
+                callback()
+            })
+        })
+
+    });
+
 }
 
 module.exports = stepDefs;
