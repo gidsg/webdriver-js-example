@@ -6,8 +6,7 @@ var stepDefs = function () {
     });
 
     this.Then(/^I should see an option to read more on the story$/, function (callback) {
-        var selector = 'aside h3';
-        this.browser.hasText(selector, 'More on this story', callback)
+        this.browser.hasText('aside h3', 'More on this story', callback)
     });
 
     this.Given(/^I open the responsive site$/, function (callback) {
@@ -15,7 +14,6 @@ var stepDefs = function () {
     });
 
     this.When(/^I choose to read more content$/, function (callback) {
-        var assert = this.assert
         var expect = this.expect
         this.browser.waitFor(".js-show-more", 100, function () {
             var self = this;
@@ -23,8 +21,6 @@ var stepDefs = function () {
                 expect(error).not.to.be.null;
                 self.buttonClick(".js-show-more", callback)
             });
-
-
         })
     });
 
