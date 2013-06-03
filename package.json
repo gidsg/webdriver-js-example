@@ -6,7 +6,8 @@
         "mocha": "*",
         "chai": "*",
         "webdriverjs": "*",
-        "phantomjs": "*"
+        "phantomjs": "*",
+        "cucumber": "*"
 
     }
 }
