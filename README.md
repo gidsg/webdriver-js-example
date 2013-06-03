@@ -24,7 +24,7 @@ Run `./node_modules/cucumber/bin/cucumber.js` to see them work.
 19:45:23.384 INFO - Creating a new session for Capabilities[{platform=ANY, javascriptEnabled=true, browserName=phantomjs,version=}]
 19:45:23.386 INFO - executable: /usr/local/bin/phantomjs
 19:45:23.386 INFO - port: 47076
-19:45:23.386 INFO - arguments: [--webdriver=47076,--webdriver-logfile=/Users/mchadburn/Projects/phantomjsdriver.log]
+19:45:23.386 INFO - arguments: [--webdriver=47076,--webdriver-logfile=~/Projects/phantomjsdriver.log]
 19:45:23.386 INFO - environment: {}
 Error: Unknown option: webdriver
 ```
