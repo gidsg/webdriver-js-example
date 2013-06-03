@@ -4,4 +4,8 @@ _An example project using Webdriver JS and Phantom JS for functional browser tes
 *	Run the server `java -jar selenium-server-standalone-2.33.0.jar`
 *	Clone this repo
 *	`npm install`
-*	`mocha js-runner.js -t 10000` 
+*	`mocha js-runner.js -t 10000`
+
+##To use cucumber.js
+
+Run `./node_modules/cucumber/bin/cucumber.js`
