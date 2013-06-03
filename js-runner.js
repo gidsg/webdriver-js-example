@@ -8,10 +8,9 @@ var client = webdriverjs.remote({
     },
     // webdriverjs has a lot of output which is generally useless
     // However, if anything goes wrong, remove this to see more details
-    //logLevel: 'silent'
+    logLevel: 'verbose'
 });
 
-client.logLevel = "verbose";
 
 describe('Run Selenium tests', function () {
 
@@ -49,10 +48,10 @@ describe('Run Selenium tests', function () {
     });
 
     it('should be able to navigate betwen the pages', function (done) {
-        this.timeout(10000);
+        var selector = 'aside h3';
 
-        client.waitUntilVisible('aside h3', function () {
-            this.hasText('aside h3', 'More on this story', function () {
+        client.waitUntilVisible(selector, function () {
+            this.hasText(selector, 'More on this story', function () {
                 done()
             })
         })
