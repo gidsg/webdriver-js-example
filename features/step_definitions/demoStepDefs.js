@@ -36,6 +36,26 @@ var stepDefs = function () {
 
     });
 
+ this.When(/^I select the sections navigation button$/, function(callback) {
+  // express the regexp above with the code you wish you had
+ // console.log("got to nav button");
+  this.browser.buttonClick(".control--sections",callback)  
+});
+
+this.Then(/^it should show me a list of sections$/, function(callback) {
+  // express the regexp above with the code you wish you had
+    
+    var assert = this.assert
+    this.browser.getElementCssProperty("class name","nav-popup--sections","display",function (error, result) {
+    assert.equal("block",result,"css value was wrong");
+        
+        callback();
+    })
+});
+
 }
+
+
+
 
 module.exports = stepDefs;

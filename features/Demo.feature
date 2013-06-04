@@ -8,3 +8,8 @@ Feature: demo
     Given I open the responsive site
     When I choose to read more content
     Then I should receive more headlines
+
+  Scenario:
+  	Given I open the responsive site
+  	When I select the sections navigation button
+  	Then it should show me a list of sections  
