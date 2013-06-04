@@ -2,20 +2,18 @@ var stepDefs = function () {
     this.World = require("../support/world.js").World;
 
     this.When(/^I open an article$/, function (callback) {
-        this.visit("http://m.gucode.co.uk/sport/2012/oct/10/icc-suspends-umpires-corruption-claims", callback);
+        this.visit("http://m.guardian.co.uk/sport/2012/oct/10/icc-suspends-umpires-corruption-claims", callback);
     });
 
     this.Then(/^I should see an option to read more on the story$/, function (callback) {
-        var selector = 'aside h3';
-        this.browser.hasText(selector, 'More on this story', callback)
+        this.browser.hasText('aside h3', 'More on this story', callback)
     });
 
     this.Given(/^I open the responsive site$/, function (callback) {
-        this.visit("http://m.gucode.co.uk", callback);
+        this.visit("http://m.guardian.co.uk", callback);
     });
 
     this.When(/^I choose to read more content$/, function (callback) {
-        var assert = this.assert
         var expect = this.expect
         this.browser.waitFor(".js-show-more", 100, function () {
             var self = this;
@@ -23,8 +21,6 @@ var stepDefs = function () {
                 expect(error).not.to.be.null;
                 self.buttonClick(".js-show-more", callback)
             });
-
-
         })
     });
 
